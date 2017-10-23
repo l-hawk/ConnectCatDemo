@@ -31,6 +31,7 @@ export class AppComponent {
     this.catsService.getNextCat((cat) => {
       this.cats.push(cat);
       console.log(cat);
+      this.title =`You have ${this.cats.length} cats!`;
     });
   }
 }
