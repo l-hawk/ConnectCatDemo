@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-//import {HttpClientModule} from '@angular/common/http';
-//import { CatService } from './cats.service';
-
+import { CatsService } from './cats.service';
 
 @Component({
   selector: 'app-root',
@@ -12,16 +10,28 @@ import { Component } from '@angular/core';
       <button (click)="onClick()">  Get me some cats</button>
     </div>
     <ul>
+      <li *ngFor="let cat of cats">
+        <img [src]='cat.images.fixed_width.url' />
+      </li>
     </ul>
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Cat App';
-  
+  catsService: CatsService;
+  cats: string[];
+
+  constructor(catsService: CatsService) {
+    this.catsService = catsService;
+    this.cats = new Array<string>();
+  }
+
   onClick(): void{
-    this.title = 'clicked';
-    
+    this.catsService.getNextCat((cat) => {
+      this.cats.push(cat);
+      console.log(cat);
+    });
   }
 }
 
