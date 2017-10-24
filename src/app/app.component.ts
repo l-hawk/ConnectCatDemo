@@ -15,7 +15,7 @@ import { CatsService } from './cats.service';
       </li>
     </ul>
     <div>
-      <img [src]='Poweredby_100px-Black_VertLogo.png' alt='Giphy logo' />
+      <img src='Poweredby_100px-Black_VertLogo.png' alt='Giphy logo' />
      </div> 
   `,
   styleUrls: ['./app.component.css']
