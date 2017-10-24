@@ -14,6 +14,9 @@ import { CatsService } from './cats.service';
         <img [src]='cat.images.fixed_width.url' (click)="onSelect(cat)"/>
       </li>
     </ul>
+    <div>
+      <img [src]='Poweredby_100px-Black_VertLogo.png' alt='Giphy logo' />
+     </div> 
   `,
   styleUrls: ['./app.component.css']
 })
