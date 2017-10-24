@@ -14,6 +14,9 @@ import { CatsService } from './cats.service';
         <img [src]='cat.images.fixed_width.url' (click)="onSelect(cat)"/>
       </li>
     </ul>
+    <div>
+      <img src="./assets.Poweredby_100px_Badge.gif"/>
+    </div>
   `,
   styleUrls: ['./app.component.css']
 })
@@ -30,6 +33,7 @@ export class AppComponent {
   onselect(cat: string){
     
   }
+  
   onClick(): void{
     this.catsService.getNextCat((cat) => {
       this.cats.push(cat);
