@@ -11,7 +11,7 @@ import { CatsService } from './cats.service';
     </div>
     <ul>
       <li *ngFor="let cat of cats">
-        <img [src]='cat.images.fixed_width.url' />
+        <img [src]='cat.images.fixed_width.url' (click)="onSelect(cat)"/>
       </li>
     </ul>
   `,
@@ -27,6 +27,9 @@ export class AppComponent {
     this.cats = new Array<string>();
   }
 
+  onselect(cat: string){
+    
+  }
   onClick(): void{
     this.catsService.getNextCat((cat) => {
       this.cats.push(cat);
