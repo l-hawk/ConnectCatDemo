@@ -10,7 +10,8 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "web.config"
+        "web.config",
+        "Poweredby_100px-Black_VertLogo.png"
       ],
       "index": "index.html",
       "main": "main.ts",
